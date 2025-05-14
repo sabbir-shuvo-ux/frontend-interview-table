@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function Home() {
@@ -7,9 +8,11 @@ export default function Home() {
         Frontend Developer Assignment | Digital Pylot
       </h1>
       <div className="text-center">
-        <Link className="hover:underline" href={"/users"}>
-          User List
-        </Link>
+        <Button asChild>
+          <Link className="hover:underline" href={"/users"}>
+            User List
+          </Link>
+        </Button>
       </div>
     </div>
   );
