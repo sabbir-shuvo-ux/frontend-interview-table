@@ -8,7 +8,7 @@ export type ApiResponse = {
 
 const getData = async (): Promise<ApiResponse> => {
   const res = await fetch(`${process.env.BASE_URL}/api/users/`, {
-    cache: "force-cache",
+    cache: "no-store",
   });
 
   if (!res.ok) {
