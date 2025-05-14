@@ -7,9 +7,7 @@ export type ApiResponse = {
 };
 
 const getData = async (): Promise<ApiResponse> => {
-  const res = await fetch(`${process.env.BASE_URL}/api/users/`, {
-    cache: "no-store",
-  });
+  const res = await fetch(`${process.env.BASE_URL}/api/users/`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch user data");
